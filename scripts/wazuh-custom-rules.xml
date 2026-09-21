@@ -1,0 +1,18 @@
+<!--
+  Wazuh Homelab - Custom Local Rules
+  File: /var/ossec/etc/rules/local_rules.xml (Ubuntu Wazuh manager)
+
+  Custom correlation rule from Phase 4 (Custom Brute-Force Detection & SIEM
+  Correlation). After five matches of base rule 60122 (Windows logon failure)
+  within 60 seconds, escalates to a Level 10 "possible brute-force attack"
+  alert mapped to MITRE ATT&CK T1110.
+-->
+<group name="windows,authentication_failed,">
+  <rule id="100002" level="10" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Possible brute-force attack: 5 Windows logon failures detected within 60 seconds</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+</group>
