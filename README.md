@@ -48,7 +48,3 @@ All commands used across the four phases are consolidated and reusable from [`sc
 - Identity and privileged-access lifecycle monitoring (account create → privilege escalate → privilege remove → delete)
 - Detection engineering: writing, validating, and deploying a custom Wazuh correlation rule mapped to MITRE ATT&CK
 - SOC-style alert triage and disposition (true positive vs. authorized activity)
-
-## Resume / Interview Summary
-
-Built and operated a self-hosted Wazuh SIEM homelab across four phases: deployed the SIEM and onboarded a Windows endpoint; configured real-time File Integrity Monitoring and investigated a simulated unauthorized change end-to-end; monitored the full lifecycle of a privileged local account through Windows Security Event IDs; and engineered a custom correlation rule that detects brute-force authentication patterns and maps them to MITRE ATT&CK T1110.
